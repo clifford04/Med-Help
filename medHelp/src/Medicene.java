@@ -1,15 +1,17 @@
 import java.io.*;
 public class Medicene {
-    String name;
-    String effect;
-    String sEffect;
-    String alt;
-    String dosage;
-    String conditions;
+    private String name;
+    private String effect;
+    private String sEffect;
+    private String alt;
+    private String dosage;
+    private String conditions;
+    private int count =0;
 
     public Medicene(String name)
     {
         this.name  = name;
+        count++;
     }
     public void medEffect(String medEffect )
     {
@@ -27,9 +29,9 @@ public class Medicene {
     {
         dosage = medDosage;
     }
-    public void medConditions(String medDosage )
+    public void medConditions(String medConditions )
     {
-        dosage = medDosage;
+        conditions = medConditions;
     }
     public void printMedication()
     {
@@ -39,7 +41,32 @@ public class Medicene {
         System.out.println("possible alterantives to taking " + name + " is " + alt);
         System.out.println("the dosage you should be taking is " + dosage);
     }
-
-
-   
+    public String getCondition()
+    {
+        return conditions;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String getEffect()
+    {
+        return effect;
+    }
+    public String getSideEffect()
+    {
+        return sEffect;
+    }
+    public String getAlt()
+    {
+        return alt;
+    }
+    public String getDosage()
+    {
+        return dosage;
+    }
+    public int getCount()
+    {
+        return count;
+    }
 }
